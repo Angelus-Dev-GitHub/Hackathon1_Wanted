@@ -2,18 +2,42 @@
     font-family: 'western';
     src: url("../fonts/go-2-old-western/Go 2 Old Western.woff");
 }
+
 :root{
     --title-font: 'western';
 }
 
 body{
+    background-image: url("../images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: saturate(50%);
+    padding-bottom: 2em;
 }
+
 /* HEADER START*/
+.title{
+    font-family: var(--title-font);
+    text-align: center;
+    font-size: 70px;
+}
+
+.star{
+    font-size: 50px;
+    margin: .5em;
+}
+
+.title, .star{
+    padding: .2em 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 15px 15px 12px #7C3F08;
+    color: black;
+}
 
 .header-nav{
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +46,7 @@ body{
     background-image: url("https://images-ext-2.discordapp.net/external/8qPI5KNv-Pmvv3QgbjCVeUzagugnpppjrmvYopXLZBE/https/i.pinimg.com/originals/ab/c0/65/abc065d7552b0fba14b79fded32f5e46.png?width=517&height=458");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 40em 35em;
+    background-size: 40em 13em;
 }
 
 .link-header:hover{
@@ -30,22 +54,27 @@ body{
 }
 
 .logo{
-    width: 10%;
+    width: 8%;
     filter: sepia(100%);
-}
-.barbele {
-    width: 100%;
+    margin-bottom: -2em;
 }
 /* HEADER END*/
 
 
 /* HOME PAGE START*/
+.barbele {
+    width: 100%;
+    height: 60%;
+    opacity: 50%;
+    filter: sepia(80%);
+    margin-top: -10em;
+}
 
 .carousel{
     width: 30%;
     height: 30%;
     display: flex;
-    margin: 5em auto 8em auto;
+    margin: 10em auto 0 auto;
     box-shadow: 15px 15px 12px black;
 }
 
@@ -53,6 +82,7 @@ body{
     padding-top: 2em;
     margin-left: 3em;
     margin-right: 3em;
+    margin-top: -15em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,34 +92,34 @@ body{
     margin: 1em;
     box-shadow: 15px 15px 12px black;
 }
-/* HOME PAGE END*/
+/* HOME PAGE END */
 
-/* wanted*/
-
-.title{
-    font-family: var(--title-font);
-    text-align: center;
-    font-size: 150px;
-}
-
-.star{
-    font-size: 50px;
-    margin: 2em;
-}
-
-.title, .star{
-    padding: .2em .2em .2em .2em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-shadow: 15px 15px 12px gray;
-    color: black;
-}
+/* WANTED START */
 
 .imgLuffy{
-    margin: 50px 0px 50px 100px;
+    margin: 50px 0 50px 100px;
     box-shadow: 15px 15px 12px black;
 }
 
-/*fin wanted */
+.city-form{
+    margin: auto;
+    width: 30%;
+    font-family: var(--title-font);
+}
+
+.form-title{
+    font-family: var(--title-font);
+    color: black;
+
+    font-size: 3em;
+    margin: 0 5em 0 5em;
+}
+
+.btn-primary{
+    margin-top: 1em;
+    background-color: grey;
+    border-color: grey;
+}
+
+/* WANTED END */
 

@@ -25,9 +25,11 @@ class WantedController extends AbstractController
     public function show($id)
     {
         $wantedManager = new WantedManager();
+        $cities = $wantedManager->getCities();
+
+        $wantedManager = new WantedManager();
         $wanted = $wantedManager->selectAllDataOneWantedById($id);
 
-        $newCity = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $date = date('Y-m-d H:i:s');
             $newCity = [
@@ -38,10 +40,9 @@ class WantedController extends AbstractController
             $cityManager->addCityForWanted($newCity, $id);
         }
 
-
         return $this->twig->render('Home/wanted.html.twig', [
-            'wanted' => $wanted
+            'wanted' => $wanted,
+            'cities' => $cities,
         ]);
     }
-
 }
