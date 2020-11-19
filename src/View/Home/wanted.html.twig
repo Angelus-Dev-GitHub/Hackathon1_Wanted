@@ -7,7 +7,7 @@
 {% block content %}
     <div class="pictures">
         <div>
-            <img class="imgLuffy" src="https://media.discordapp.net/attachments/777856264415215627/778964321094860810/Luffy.jpg" width=600 heigth=auto alt="img Luffy">
+            <img class="imgLuffy" src="/assets/images/{{ wanted.picture }}" width=600 heigth=auto alt="{{ wanted.picture }}">
         </div>
         <div class="texte">
             <h2 class="profile">Profile</h2>
@@ -19,7 +19,7 @@
         </div>
     </div>
     <h2 class="form-title">When did you see this person for the last time ?</h2>
-    <form class="city-form">
+    <form class="city-form" method="post">
         <div class="col-auto my-1">
             <label class="mr-sm-2" for="inlineFormCustomSelect"></label>
             <select name="city" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
