@@ -121,12 +121,6 @@ body{
     margin: 0 5em 0 5em;
 }
 
-.btn-primary{
-    margin-top: 1em;
-    background-color: grey;
-    border-color: grey;
-}
-
 .pictures {
     display: flex;
 }
@@ -147,6 +141,16 @@ body{
     background-position: right;
     margin-top: 3em;
     margin-right: 5em;
+}
+
+.btn-submit {
+    background-color: black;
+    border-color : black;
+}
+
+.btn-submit:hover {
+    background-color: black;
+    border-color : black;
 }
 
 /* WANTED END */

@@ -11,6 +11,7 @@ namespace App\Controller;
 use App\Model\CityManager;
 use App\Model\MapManager;
 use App\Model\WantedManager;
+use Nette\DI\Definitions\LocatorDefinition;
 
 class WantedController extends AbstractController
 {
@@ -33,6 +34,7 @@ class WantedController extends AbstractController
 
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
             $date = date('Y-m-d H:i:s');
             $newCity = [
                 'city_id' => intval($_POST['city']),
