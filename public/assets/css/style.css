@@ -69,6 +69,10 @@ body{
     filter: sepia(80%);
     margin-top: -10em;
 }
+/* HEADER END*/
+
+
+/* HOME PAGE START*/
 
 .carousel{
     width: 30%;
@@ -97,7 +101,7 @@ body{
 /* WANTED START */
 
 .imgLuffy{
-    margin: 50px 0 50px 100px;
+    margin: 70px 50px 0px 100px;
     box-shadow: 15px 15px 12px black;
 }
 
@@ -121,5 +125,28 @@ body{
     border-color: grey;
 }
 
+.pictures {
+    display: flex;
+}
+.profile {
+    font-family: var(--title-font);
+    font-size: 5em;
+    align-items: center;
+    margin-top: 1em;
+    text-align: center;
+    margin-left: 1em;
+}
+
+.texte {
+    width: 100%;
+    background-image: url("https://thumbs.dreamstime.com/b/la-feuille-d-un-vieux-papier-est-jointe-par-des-clous-13436614.jpg");
+    background-size: 90% 110%;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-top: 3em;
+    margin-right: 5em;
+}
+
 /* WANTED END */
+
 
