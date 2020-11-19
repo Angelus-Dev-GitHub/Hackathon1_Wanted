@@ -1,0 +1,29 @@
+/* wanted*/
+body {
+    background-image: url("../images/fond-du-papier-froisse_1373-412.jpg");
+    background-size: cover;
+}
+@font-face {
+    font-family: "go-2-old-western";
+    src: url("../fonts/go-2-old-western/Go 2 Old Western.woff");
+}
+ .h2title {
+     font-family: go-2-old-western;
+     text-align: center;
+     font-size: 150px;
+}
+ .star {
+     font-size: 50px;
+ }
+ .h2title, .star {
+     padding: 20px 200px 20px 200px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     text-shadow: 15px 15px 12px gray;
+ }
+.imgLuffy {
+    margin: 50px 0px 50px 100px;
+    box-shadow: 15px 15px 12px black;
+}
+/*fin wanted */
