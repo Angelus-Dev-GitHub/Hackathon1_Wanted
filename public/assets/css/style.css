@@ -120,12 +120,6 @@ body{
     margin: 2em 5em 0 5em;
 }
 
-.btn-primary{
-    margin-top: 1em;
-    background-color: grey;
-    border-color: grey;
-}
-
 .pictures {
     display: flex;
 }
@@ -156,6 +150,16 @@ body{
     margin-left: 5em;
     margin-top: 1em;
     margin-right: 4em;
+}
+
+.btn-submit {
+    background-color: black;
+    border-color : black;
+}
+
+.btn-submit:hover {
+    background-color: black;
+    border-color : black;
 }
 
 /* WANTED END */
