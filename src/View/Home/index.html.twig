@@ -2,10 +2,16 @@
 
 {% block content %}
 
-    <h1>Most Wanted !</h1>
-{% for one in wanted %}
-    {{ one.picture }}
-    {% endfor %}
+    {% include 'Home/_header.html.twig'%}
 
+{% include 'Home/_carousel.html.twig' %}
+
+    <div class="cards">
+{% for one in wanted %}
+    <a href="/">
+        <img class="wanted-picture" alt="wanted person picture" src="/assets/images/{{ one.picture }}">
+    </a>
+{% endfor %}
+    </div>
 
 {% endblock %}
