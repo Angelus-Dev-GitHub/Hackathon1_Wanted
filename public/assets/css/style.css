@@ -9,7 +9,11 @@
 
 body{
     background-image: url("../images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: saturate(50%);
 }
+
 /* HEADER START*/
 .header-nav{
     background-image: url("https://i.pinimg.com/originals/ab/c0/65/abc065d7552b0fba14b79fded32f5e46.png");
@@ -22,12 +26,10 @@ body{
     justify-content: center;
     align-items: center;
     align-content: center;
-}
-.title-home-page{
-    font-family: var(--title-font);
-    font-size: 5em;
-    color: black;
-    text-shadow: 12px 12px 5px black;
+    background-image: url("https://images-ext-2.discordapp.net/external/8qPI5KNv-Pmvv3QgbjCVeUzagugnpppjrmvYopXLZBE/https/i.pinimg.com/originals/ab/c0/65/abc065d7552b0fba14b79fded32f5e46.png?width=517&height=458");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40em 35em;
 }
 
 .link-header:hover{
@@ -38,7 +40,9 @@ body{
     width: 10%;
     filter: sepia(100%);
 }
-
+.barbele {
+    width: 100%;
+}
 /* HEADER END*/
 
 
@@ -58,6 +62,7 @@ body{
     margin-right: 3em;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .wanted-picture{
@@ -65,3 +70,33 @@ body{
     box-shadow: 15px 15px 12px black;
 }
 /* HOME PAGE END*/
+
+/* wanted*/
+
+.title{
+    font-family: var(--title-font);
+    text-align: center;
+    font-size: 150px;
+}
+
+.star{
+    font-size: 50px;
+    margin: 2em;
+}
+
+.title, .star{
+    padding: .2em .2em .2em .2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 15px 15px 12px gray;
+    color: black;
+}
+
+.imgLuffy{
+    margin: 50px 0px 50px 100px;
+    box-shadow: 15px 15px 12px black;
+}
+
+/*fin wanted */
+
