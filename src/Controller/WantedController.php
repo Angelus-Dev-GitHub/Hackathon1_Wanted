@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Model\CityManager;
+use App\Model\MapManager;
 use App\Model\WantedManager;
 
 class WantedController extends AbstractController
@@ -40,9 +41,13 @@ class WantedController extends AbstractController
             $cityManager->addCityForWanted($newCity, $id);
         }
 
+        $newMapManager = new MapManager();
+        $positions = $newMapManager->read($id);
+
         return $this->twig->render('Home/wanted.html.twig', [
             'wanted' => $wanted,
             'cities' => $cities,
+            'positions' => $positions
         ]);
     }
 }
