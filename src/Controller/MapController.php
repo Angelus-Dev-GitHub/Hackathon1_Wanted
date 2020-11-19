@@ -14,7 +14,7 @@ class MapController extends AbstractController
     {
         $newMapManager = new MapManager();
         $positions = $newMapManager->read($id);
-        return $this->twig->render('Test/map.html.twig', [
+        return $this->twig->render('Component/_map.html.twig', [
             'positions' => $positions
         ]);
     }
