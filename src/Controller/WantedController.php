@@ -8,9 +8,7 @@
 
 namespace App\Controller;
 
-use App\Model\WantedManager;
-
-class HomeController extends AbstractController
+class WantedController  extends AbstractController
 {
 
     /**
@@ -21,11 +19,8 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function wanted()
     {
-        $wantedManager = new WantedManager();
-        $wanted = $wantedManager->getWanted();
-
-        return $this->twig->render('Home/index.html.twig', ['wanted' => $wanted]);
+        return $this->twig->render('Home/wanted.html.twig');
     }
 }
