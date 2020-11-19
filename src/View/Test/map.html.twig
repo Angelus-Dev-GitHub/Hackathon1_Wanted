@@ -13,9 +13,10 @@
 </head>
 <body>
 {{ dump(positions) }}
-{% for position in positions %}
-<div id="map" data-latitude="{{ position.latitude }}" data-longitude="{{ position.longitude }}">
-    {% endfor %}
+
+<div id="map" data-latitude="{{ positions[''].latitude }}" data-longitude="{{ positions[''].longitude }}"
+            data-created="{{ positions[''].created_at }}">
+
     <!-- Ici s'affichera la carte -->
 
 </div>
@@ -25,15 +26,29 @@
 <!--<script src="../../../public/assets/js/mapscript.js" type="text/javascript"></script>-->
 <script type="text/javascript">
     const target = document.getElementById('map');
-    target.addEventListener('DOMContentLoaded', (event) => {
-        var positionlatitude = new Array();
-        var positionslatitude = positionlatitude.push(event.target.dataset.latitude);
-        console.log(positionlatitude);
-        console.log(event.target.dataset.latitude);
-        console.log(event.target.dataset.longitude);
+    target.addEventListener('click', (event) => {
+        latitude.dataset.latitude = {{ positions[0].latitude }};
+        longitude.dataset.longitude = {{ positions[0].longitude }};
+        target.dataset.created = '{{ positions[0].created_at }}';
         var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude]).addTo(macarte);
+        marker.bindPopup(event.target.dataset.created);
 
     })
+    var latitude = document.querySelector('#map');
+    var longitude = document.querySelector('#map');
+    latitude.addEventListener('click', (event) => {
+        latitude.dataset.latitude = {{ positions[1].latitude }};
+        longitude.dataset.longitude = {{ positions[1].longitude }};
+        var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude]).addTo(macarte);
+    })
+    var latitude = document.querySelector('#map');
+    var longitude = document.querySelector('#map');
+    latitude.addEventListener('click', (event) => {
+        latitude.dataset.latitude = {{ positions[2].latitude }};
+        longitude.dataset.longitude = {{ positions[2].longitude }};
+        var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude]).addTo(macarte);
+    })
+
 
     // On initialise la latitude et la longitude de Paris (centre de la carte)
     var lat = 40.7607793;
@@ -54,7 +69,7 @@
         // Nous ajoutons un marqueur
         //var marker = L.marker([25.7742, -80.1936]).addTo(macarte);
         //Nous parcourons la liste des villes
-        for (position in positions) {
+        /*for (position in positions) {
             // Nous définissons l'icône à utiliser pour le marqueur, sa taille affichée (iconSize), sa position (iconAnchor) et le décalage de son ancrage (popupAnchor)
 		var myIcon = L.icon({
 			iconUrl: iconBase + "autres.png",
@@ -65,7 +80,7 @@
             var marker = L.marker([position.latitude, position.longitude]).addTo(macarte);
             // Nous ajoutons la popup.
 	        marker.bindPopup(position.created_at);
-        }
+        }*/
     }
     window.onload = function(){
         // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
