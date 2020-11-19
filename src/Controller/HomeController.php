@@ -8,6 +8,8 @@
 
 namespace App\Controller;
 
+use App\Model\WantedManager;
+
 class HomeController extends AbstractController
 {
 
@@ -21,6 +23,9 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $wantedManager = new WantedManager();
+        $wanted = $wantedManager->getWanted();
+
+        return $this->twig->render('Home/index.html.twig', ['wanted' => $wanted]);
     }
 }

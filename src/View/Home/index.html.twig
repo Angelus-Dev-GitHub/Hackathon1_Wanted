@@ -1,5 +1,19 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+
+
+{% include 'Home/_carousel.html.twig' %}
+    <div>
+        <img class="barbele" src="./assets/images/barbelé.png">
+    </div>
+
+    <div class="cards">
+{% for one in wanted %}
+    <a href="/">
+        <img class="wanted-picture" alt="wanted person picture" src="/assets/images/{{ one.picture }}">
+    </a>
+{% endfor %}
+    </div>
+
 {% endblock %}
