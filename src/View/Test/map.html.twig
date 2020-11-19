@@ -39,14 +39,18 @@
     latitude.addEventListener('click', (event) => {
         latitude.dataset.latitude = {{ positions[1].latitude }};
         longitude.dataset.longitude = {{ positions[1].longitude }};
+        target.dataset.created = '{{ positions[1].created_at }}';
         var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude]).addTo(macarte);
+        marker.bindPopup(event.target.dataset.created);
     })
     var latitude = document.querySelector('#map');
     var longitude = document.querySelector('#map');
     latitude.addEventListener('click', (event) => {
         latitude.dataset.latitude = {{ positions[2].latitude }};
         longitude.dataset.longitude = {{ positions[2].longitude }};
+        target.dataset.created = '{{ positions[2].created_at }}';
         var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude]).addTo(macarte);
+        marker.bindPopup(event.target.dataset.created);
     })
 
 
