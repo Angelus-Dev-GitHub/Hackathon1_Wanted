@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Model\CityManager;
+use App\Model\MapManager;
 use App\Model\WantedManager;
 
 class WantedController extends AbstractController
@@ -30,19 +31,24 @@ class WantedController extends AbstractController
         $wantedManager = new WantedManager();
         $wanted = $wantedManager->selectAllDataOneWantedById($id);
 
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $date = date('Y-m-d H:i:s');
             $newCity = [
-                'city_id' => $_POST['city'],
+                'city_id' => intval($_POST['city']),
                 'created_at' => $date,
             ];
             $cityManager = new CityManager();
             $cityManager->addCityForWanted($newCity, $id);
         }
 
+        $newMapManager = new MapManager();
+        $positions = $newMapManager->read($id);
+
         return $this->twig->render('Home/wanted.html.twig', [
             'wanted' => $wanted,
             'cities' => $cities,
+            'positions' => $positions
         ]);
     }
 }
