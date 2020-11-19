@@ -12,7 +12,6 @@
     <title>Carte</title>
 </head>
 <body>
-{{ dump(positions) }}
 
 <div id="map" data-latitude="{{ positions[''].latitude }}" data-longitude="{{ positions[''].longitude }}"
             data-created="{{ positions[''].created_at }}">
@@ -38,20 +37,20 @@
     {% endfor %}
 
 
-    // On initialise la latitude et la longitude de Paris (centre de la carte)
-    var lat = 40.7607793;
-    var lon = -111.8910474;
+    // On initialise la latitude et la longitude des Etats-Unis (centre de la carte)
+    var lat = 39.035;
+    var lon = -94.3567;
     var macarte = null;
     // Fonction d'initialisation de la carte
     function initMap() {
         // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
-        macarte = L.map('map').setView([lat, lon], 11);
+        macarte = L.map('map').setView([lat, lon], 4);
         // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
         L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
             // Il est toujours bien de laisser le lien vers la source des données
             attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-            minZoom: 1,
-            maxZoom: 20
+            minZoom: 4,
+            maxZoom: 10
         }).addTo(macarte);
 
         // Nous ajoutons un marqueur
