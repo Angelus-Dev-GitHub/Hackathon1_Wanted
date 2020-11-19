@@ -19,4 +19,10 @@ class WantedManager extends AbstractManager
         return $this->pdo->query($query)->fetchAll();
     }
 
+    public function getCities()
+    {
+        $query = "SELECT * FROM city";
+        return $this->pdo->query($query)->fetchAll();
+    }
+
 }

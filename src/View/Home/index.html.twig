@@ -4,12 +4,12 @@
 
 {% include 'Home/_carousel.html.twig' %}
     <div>
-        <img class="barbele" src="./assets/images/barbelé.png">
+        <img class="barbele" src="/assets/images/barbele.png">
     </div>
 
     <div class="cards">
 {% for one in wanted %}
-    <a href="/">
+    <a href="/wanted/show/{{ one.id }}">
         <img class="wanted-picture" alt="wanted person picture" src="/assets/images/{{ one.picture }}">
     </a>
 {% endfor %}

@@ -8,6 +8,8 @@
 
 namespace App\Controller;
 
+use App\Model\WantedManager;
+
 class WantedController  extends AbstractController
 {
 
@@ -21,6 +23,11 @@ class WantedController  extends AbstractController
      */
     public function wanted()
     {
-        return $this->twig->render('Home/wanted.html.twig');
+        $wantedManager = new WantedManager();
+        $cities = $wantedManager->getCities();
+
+        return $this->twig->render('Home/wanted.html.twig', [
+            'cities' => $cities,
+        ]);
     }
 }
