@@ -8,8 +8,9 @@
     <h1>Wanted found: {{wantedFound|length }}</h1>
     <ul>
         {% for wanted in wantedFound %}
-            <li><a href="/admin/show/{{ wanted.id }}"> {{ wanted.name }} </a> <p> {{ wanted.reward }} </p></li>
-            <img src="/assets/images/{{wanted.picture}}" class="card-location" alt="image test">
+            <li><a href="/wanted/show/{{ wanted.id }}"><img src="/assets/images/{{wanted.picture}}"
+                                                            class="card-location" alt="image test"></a></li>
+
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}

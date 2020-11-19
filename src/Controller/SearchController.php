@@ -14,7 +14,6 @@ class SearchController extends AbstractController
             $name = $_POST['search'];
             $searchManager = new SearchManager();
             $wantedFound = $searchManager->selectByWordKey($name);
-            var_dump($wantedFound);die;
 
             return $this->twig->render('Home/search.html.twig', [
                 'wantedFound' => $wantedFound

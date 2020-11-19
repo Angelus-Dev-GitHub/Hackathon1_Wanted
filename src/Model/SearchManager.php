@@ -17,7 +17,7 @@ class SearchManager extends AbstractManager
     {
         $statement = $this->pdo->prepare("SELECT wanted.id, wanted.name, wanted.reward, wanted.picture
         FROM " . self::TABLE . "
-        WHERE wanted.name = :name");
+        WHERE wanted.name LIKE :name");
         $statement->bindValue(':name', '%' . $name . '%', \PDO::PARAM_STR);
         $statement->execute();
 
