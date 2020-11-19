@@ -1,0 +1,12 @@
+.carousel{
+    width: 30%;
+    height: 30%;
+    display: flex;
+    margin: auto;
+}
+
+body{
+    background-image: url("https://cdn.discordapp.com/attachments/777854989108379650/778977880746360852/unknown.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
