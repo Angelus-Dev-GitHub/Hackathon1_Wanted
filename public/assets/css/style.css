@@ -2,18 +2,20 @@
     font-family: 'western';
     src: url("../fonts/go-2-old-western/Go 2 Old Western.woff");
 }
+
 :root{
     --title-font: 'western';
 }
 
 body{
-    background-image: url("https://cdn.discordapp.com/attachments/777854989108379650/778977880746360852/unknown.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: saturate(50%);
+    background-image: url("../images/background2.jpg");
 }
 /* HEADER START*/
-
+.header-nav{
+    background-image: url("https://i.pinimg.com/originals/ab/c0/65/abc065d7552b0fba14b79fded32f5e46.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .header-nav{
     display: flex;
     flex-direction: column;
