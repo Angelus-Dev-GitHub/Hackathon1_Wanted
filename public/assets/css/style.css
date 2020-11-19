@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'western';
+    src: url("../fonts/go-2-old-western/Go 2 Old Western.woff");
+}
+:root{
+    --title-font: 'western';
+}
+
+body{
+    background-image: url("https://cdn.discordapp.com/attachments/777854989108379650/778977880746360852/unknown.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: saturate(50%);
+}
+/* HEADER START*/
+
+.header-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.title-home-page{
+    font-family: var(--title-font);
+    font-size: 5em;
+    color: black;
+    text-shadow: 12px 12px 5px black;
+}
+
+.link-header:hover{
+    text-decoration: none;
+}
+
+.logo{
+    width: 10%;
+    filter: sepia(100%);
+}
+
+/* HEADER END*/
+
+
+/* HOME PAGE START*/
+
+.carousel{
+    width: 30%;
+    height: 30%;
+    display: flex;
+    margin: 5em auto 8em auto;
+    box-shadow: 15px 15px 12px black;
+}
+
+.cards{
+    padding-top: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wanted-picture{
+    margin: 1em;
+    box-shadow: 15px 15px 12px black;
+}
+/* HOME PAGE END*/
