@@ -2,9 +2,18 @@
 
 {% block content %}
 
+    <div class="search-form">
+        <h2 class="search-title">Looking for a dangerous person ?</h2>
+        <form class="form-inline my-2 my-lg-0 city-form" method="post" action="/Search/show">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" class="form-control
+                       {{ errors.search ? 'is-invalid' : '' }}"
+                   aria-label="Search" name="search">
+            <button class="btn-submit btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
 
 {% include 'Home/_carousel.html.twig' %}
-    <div class="repeat-barbele">
+    <div>
         <img class="barbele" src="/assets/images/barbele.png">
     </div>
     <div class="cards">
@@ -15,12 +24,7 @@
 {% endfor %}
     </div>
     <div>
-        <form class="form-inline my-2 my-lg-0" method="post" action="/Search/show">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" class="form-control
-                       {{ errors.search ? 'is-invalid' : '' }}"
-                   aria-label="Search" name="search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        {% include 'Home/formAdd.html.twig' %}
     </div>
 
 {% endblock %}
