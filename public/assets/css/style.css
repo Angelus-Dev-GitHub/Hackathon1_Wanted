@@ -66,29 +66,22 @@ body{
 /* HOME PAGE START*/
 .barbele {
     width: 100%;
-    height: 60%;
+    height:40%;
     opacity: 50%;
     filter: sepia(80%);
-    margin-top: -10em;
+    position: absolute;
+    margin-top: 0rem;
 }
+
 /* HEADER END*/
 
 
 /* HOME PAGE START*/
 
-.carousel{
-    width: 30%;
-    height: 30%;
-    display: flex;
-    margin: 10em auto 0 auto;
-    box-shadow: 15px 15px 12px black;
-}
-
 .cards{
-    padding-top: 2em;
     margin-left: 3em;
     margin-right: 3em;
-    margin-top: -15em;
+    margin-top: 13em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -116,13 +109,20 @@ body{
 
 /* WANTED START */
 
-.imgLuffy{
-    margin: 70px 50px 0px 100px;
+
+.imgLuffy {
+    margin: 70px 50px 50px 100px;
     box-shadow: 15px 15px 12px black;
+}
+.tampon {
+    margin: 20px 200px -600px 150px;
+    position: relative;
+    width: 400px;
+    transform: rotate(-10deg);
 }
 
 .city-form{
-    margin: auto;
+    margin: auto auto 2em auto;
     width: 30%;
     font-family: var(--title-font);
 }
@@ -132,6 +132,7 @@ body{
     color: black;
     font-size: 3em;
     margin: 2em 5em 0 5em;
+    text-align: center;
 }
 
 .pictures {
@@ -149,7 +150,7 @@ body{
 .texte {
     width: 100%;
     height: auto;
-    background-image: url("/assets/images/feuille de parchemin.png");
+    background-image: url('../images/feuille-de-parchemin.png');
     background-size:90% 115%;
     background-repeat: no-repeat;
     background-position: right;
@@ -167,6 +168,10 @@ body{
     padding-left: 90px;
 }
 
+.form {
+    display: inline-block;
+    margin-left: 10em;
+}
 .btn-submit {
     background-color: black;
     border-color : black;
@@ -180,6 +185,36 @@ body{
 }
 
 /* WANTED END */
+
+/* FORM START */
+
+.form-title2{
+    font-family: var(--title-font);
+    color: black;
+    font-size: 3em;
+    margin: 2em 5em 0 5em;
+}
+.form-texte{
+    font-family: var(--title-font);
+    color: black;
+    font-size: 2em;
+    margin: 2em 2em 0 5em;
+}
+
+/* FORM END */
+
+/* MAP START*/
+
+#map {
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+    filter: sepia(30%);
+    border-radius: 25px;
+    box-shadow: 15px 15px 12px black;
+}
+
+/*MAP END*/
 
 /* SEARCH RESULT PAGE START */
 
