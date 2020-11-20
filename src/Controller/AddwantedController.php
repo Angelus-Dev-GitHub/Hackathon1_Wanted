@@ -24,7 +24,7 @@ class AddwantedController extends AbstractController
             ];
             $newWantedManager = new WantedManager();
             $id = $newWantedManager->addNewWanted($wanted);
-            header('Location: /wanted/show/' . $id);
+            header('Location: /');
         }
     }
 }
