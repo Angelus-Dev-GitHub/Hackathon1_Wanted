@@ -167,4 +167,20 @@ body{
 
 /* WANTED END */
 
+/* FORM START */
 
+.form-title2{
+    font-family: var(--title-font);
+    color: black;
+    font-size: 3em;
+    margin: 2em 5em 0 5em;
+}
+
+.form-texte{
+    font-family: var(--title-font);
+    color: black;
+    font-size: 2em;
+    margin: 2em 2em 0 5em;
+}
+
+/* FORM END */
