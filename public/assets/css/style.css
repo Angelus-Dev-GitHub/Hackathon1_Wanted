@@ -96,7 +96,7 @@ body{
     display: flex;
     margin-top: 5em;
     margin-bottom: 8em;
-    margin-left: 20em;
+    margin-left: 32em;
 }
 
 .search-title{
@@ -104,6 +104,12 @@ body{
     color: black;
     font-size: 3em;
     margin-right: -3em;
+}
+
+.add-form{
+    padding-bottom: 3em;
+
+    padding-top: 0.15em;
 }
 /* HOME PAGE END */
 
@@ -192,7 +198,7 @@ body{
     font-family: var(--title-font);
     color: black;
     font-size: 3em;
-    margin: 2em 5em 0 5em;
+    margin: 2em 1em 0 4em;
 }
 .form-texte{
     font-family: var(--title-font);
