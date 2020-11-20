@@ -53,22 +53,4 @@ class WantedController extends AbstractController
             'positions' => $positions
         ]);
     }
-
-    public function add()
-    {
-        $wanted = [];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $wanted = [
-                'name' => $_POST['name'],
-                'descriptif' => $_POST['descriptif'],
-                'reward' => intval($_POST['reward']),
-                'picture' => $_POST['picture'],
-            ];
-
-            $newWantedManager = new WantedManager();
-            $id = $newWantedManager->addNewWanted($wanted);
-            header('Location: /wanted/show/' . $id);
-
-        }
-    }
 }

@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+ {% block title %}
+     New Wanted
+ {% endblock %}
+
+{% block content %}
+    <h1>Add a new Wanted</h1>
+    <div class="form-container">
+        <form action="/addwanted/add" method="post" class="form">
+            <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" name="name" id="name" placeholder="Give a Name"">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="descriptif" id="descriptif" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="promo">Reward</label>
+                <input type="text" name="reward" id="reward" placeholder="Give a Reward"">
+            </div>
+            <div class="form-group">
+                <label for="promo">Picture</label>
+                <input type="text" name="picture" id="picture" placeholder="Give a Picture"">
+            </div>
+            <button type="submit" class="btn btn-primary btn-add"><i class="fas fa-check"></i></button>
+        </form>
+    </div>
+{% endblock %}

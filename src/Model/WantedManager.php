@@ -41,16 +41,15 @@ class WantedManager extends AbstractManager
 
     public function addNewWanted($wanted)
     {
-        $query = "INSERT INTO " . self::TABLE . " (name', 'descriptif', 'reward', 'picture')
-         VALUES (:name, :descriptif, reward, picture)";
+        $query = "INSERT INTO " . self::TABLE . " (`name`, `descriptif`, `reward`, `picture`)
+         VALUES (:name, :descriptif, :reward, :picture)";
         $statement = $this->pdo->prepare($query);
-        $statement->bindValue(':name', $wanted['name'], \PDO::PARAM_INT);
-        $statement->bindValue(':descriptif', $wanted['dscriptif'], \PDO::PARAM_INT);
+        $statement->bindValue(':name', $wanted['name'], \PDO::PARAM_STR);
+        $statement->bindValue(':descriptif', $wanted['descriptif'], \PDO::PARAM_STR);
         $statement->bindValue(':reward', $wanted['reward'], \PDO::PARAM_INT);
-        $statement->bindValue(':picture', $wanted['picture'], \PDO::PARAM_INT);
+        $statement->bindValue(':picture', $wanted['picture'], \PDO::PARAM_STR);
 
-        if ($statement->execute()) {
-            return (int)$this->pdo->lastInsertId();
-        }
+        $statement->execute();
+        return (int)$this->pdo->lastInsertId();
     }
 }
