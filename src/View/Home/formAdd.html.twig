@@ -1,16 +1,10 @@
-{% extends 'layout.html.twig' %}
-
- {% block title %}
-     New Wanted
- {% endblock %}
-
 {% block content %}
     <h2 class="form-title2">Add a new Wanted</h2>
     <div class="">
         <form action="/addwanted/add" method="post" class="city-form">
             <div class="form-group">
                 <label for="title" class="form-texte">Name</label>
-                <input type="text" name="name" id="name" placeholder="Give a Name"">
+                <input type="text" name="name" id="name" placeholder="Give a Name">
             </div>
             <div class="form-group">
                 <label for="description" class="form-texte">Description</label>
@@ -18,18 +12,12 @@
             </div>
             <div class="form-group">
                 <label for="promo" class="form-texte">Reward</label>
-                <input type="text" name="reward" id="reward" placeholder="Give a Reward"">
+                <input type="text" name="reward" id="reward" placeholder="Give a Reward">
             </div>
-            <div>
-            <label for="imageUpload" class="form-texte">Upload an profile image</label>
-            <input type="file" name="imageinput" id="imageUpload" />
-            </div>
-            <!--<div class="form-group">
-                <label for="promo">Picture</label>
-                <input type="text" name="picture" id="picture" placeholder="Give a Picture"">
-            </div>-->
-            <div>
-            <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-check"></i></button>
+            <div class="form-group">
+                <label for="promo" class="form-texte">Picture</label>
+                <input type="text" name="picture" id="picture" placeholder="Give a Picture">
+                <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-check"></i></button>
             </div>
         </form>
     </div>
