@@ -7,6 +7,7 @@
 {% block content %}
     <div class="pictures">
         <div>
+            <img class="tampon" src="/assets/images/tampon.png">
             <img class="imgLuffy" src="/assets/images/{{ wanted.picture }}" width=600 heigth=auto alt="{{ wanted.picture }}">
         </div>
         <div class="texte">
@@ -25,9 +26,9 @@
             </ul>
         </div>
     </div>
-    <h2 class="form-title">When did you see this person for the last time ?</h2>
+    <h2 class="form-title">Where did you see this person for the last time ?</h2>
     <form class="city-form" method="post">
-        <div class="col-auto my-1">
+        <div class="form">
             <label class="mr-sm-2" for="inlineFormCustomSelect"></label>
             <select name="city" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                 <option selected>Choose a city</option>
