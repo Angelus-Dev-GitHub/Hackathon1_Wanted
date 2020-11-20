@@ -78,8 +78,6 @@ body{
 
 /* HOME PAGE START*/
 
-
-
 .cards{
     margin-left: 3em;
     margin-right: 3em;
@@ -92,6 +90,20 @@ body{
 .wanted-picture{
     margin: 1em;
     box-shadow: 15px 15px 12px black;
+}
+
+.search-form{
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 8em;
+    margin-left: 20em;
+}
+
+.search-title{
+    font-family: var(--title-font);
+    color: black;
+    font-size: 3em;
+    margin-right: -3em;
 }
 /* HOME PAGE END */
 
@@ -163,11 +175,13 @@ body{
 .btn-submit {
     background-color: black;
     border-color : black;
+    color: white;
 }
 
 .btn-submit:hover {
     background-color: black;
     border-color : black;
+    color: white;
 }
 
 /* WANTED END */
@@ -201,6 +215,29 @@ body{
 }
 
 /*MAP END*/
+
+/* SEARCH RESULT PAGE START */
+
+.result-title{
+    font-family: var(--title-font);
+    color: black;
+    font-size: 3em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+}
+
+.search-result{
+    list-style-type: none;
+}
+
+.search-result-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35em;
+    margin-top: 3em;
+}
+
+/* SEARCH RESULT PAGE END */
 
 /*FROM START*/
 .formAdd {
