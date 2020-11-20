@@ -10,7 +10,7 @@ use http\Env\Response;
 
 class MapController extends AbstractController
 {
-    public function Show($id)
+    public function Map($id)
     {
         $newMapManager = new MapManager();
         $positions = $newMapManager->read($id);

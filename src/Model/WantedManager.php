@@ -13,9 +13,9 @@ class WantedManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-    public function getWanted ()
+    public function getWanted()
     {
-        $query = "SELECT * FROM wanted";
+        $query = "SELECT * FROM wanted ORDER BY reward DESC ";
         return $this->pdo->query($query)->fetchAll();
     }
 
