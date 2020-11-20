@@ -25,17 +25,21 @@
 <!--<script src="../../../public/assets/js/mapscript.js" type="text/javascript"></script>-->
 <script type="text/javascript">
 
+    var myIcon = L.icon ({
+        iconUrl : '/assets/images/bandit.svg',
+        iconSize : [30, 30],
+    });
+
     {% for position in positions %}
         const target{{ position.city_id }} = document.getElementById('map');
     target{{ position.city_id }}.addEventListener('click', (event) => {
         target{{ position.city_id }}.dataset.latitude = {{ position.latitude }};
         target{{ position.city_id }}.dataset.longitude = {{ position.longitude }};
         target{{ position.city_id }}.dataset.created = '{{ position.created_at }}';
-            var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude]).addTo(macarte);
+            var marker = L.marker([event.target.dataset.latitude, event.target.dataset.longitude], {icon: myIcon}).addTo(macarte);
             marker.bindPopup(event.target.dataset.created);
         })
     {% endfor %}
-
 
     // On initialise la latitude et la longitude des Etats-Unis (centre de la carte)
     var lat = 39.035;
