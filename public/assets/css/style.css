@@ -239,4 +239,15 @@ body{
 
 /* SEARCH RESULT PAGE END */
 
+/*FROM START*/
+.formAdd {
+    width: 100%;
+    height: auto;
+    background-image: url('../images/papier.jpg');
+    background-size:50% 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 4em;
+    border-radius: 15px;
+}
 
