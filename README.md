@@ -1,3 +1,20 @@
+# Présentation du projet
+Ce projet a été réalisé lors du 1er hackathon organisé par notre ecole 'Wild Code School'. L'objectif étant la réalisation, par équipe, d'un site dynamique sur une durée de 29h00, avec présentation du site en anglais devant l'ensemble des campus. Le thème étant 'Back to the futur', comment utiliser la technologie d'aujourd'hui pour solutionner un problème du passé.
+Mon groupe est parti sur un site de recherche des bandits au temps du Far West. les fontionnalités du groupe étant:
+  * Affichage des 3 avis de recherche des bandits les plus dangereux, avec utilisation d'un carousel.
+  * Affichage des avis de recherche par ordre décroissant des récompenses.
+  * Formulaire (fonctionnel) d'ajout d'un avis de recherche avec upload d'image.
+  * Barre de recherche (fonctionnelle).
+  * Page d'affichage des résultats de recherche.
+  * Affichage du profil d'un bandits avec description, et possibilité de signaler sa position avec visualisation sur une carte des différentes endroits où il a été aperçu avec les dates (fonctionnelle).
+
+Possibilité de visualisé un aperçu du site dans l'onglet Wiki.-> https://github.com/Angelus-Dev-GitHub/Hackathon1_Wanted/wiki
+
+
+
+
+
+
 # Simple MVC
 
 ## Description
